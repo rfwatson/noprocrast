@@ -11,7 +11,7 @@ begin
 	when 'status'
 		puts Noprocast.status_message
 	when 'edit'
-		if Process.uid != File.stat(Noprocast.deny_file_path).uid
+		if File.exists?(Noprocast.deny_file_path) && (Process.uid != File.stat(Noprocast.deny_file_path).uid)
 			puts "Can't edit this file as it belongs to another user (hint: don't use sudo)" 
 			exit
 		end
