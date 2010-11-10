@@ -4,7 +4,7 @@ require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'lib', 'noproc
 
 begin
 	case ARGV.first
-	when 'on'
+	when 'on', 'reload'
 		Noprocast.activate!
 	when 'off'
 		Noprocast.deactivate!
@@ -16,6 +16,11 @@ begin
 			exit
 		end
 		Noprocast.edit!
+		if Noprocast.active?
+			puts "Saved. Now: noprocast reload"
+		else
+			puts "Saved. Now: noprocast on"
+		end
 	when 'help', '-h', '--help', nil
 		puts "Usage: [sudo] noprocast [on|off|status|edit]"
 	end

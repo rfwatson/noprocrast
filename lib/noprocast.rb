@@ -12,7 +12,7 @@ class Noprocast
 
 		def current_hosts
 			setup_deny_file_if_required!
-			File.read(deny_file_path).split(/\n/).map(&:strip)
+			File.read(deny_file_path).split(/\n/).select { |line| line.match(/[a-zA-Z0-9]/) }.map(&:strip)
 		end
 
 		def hosts_file_content
