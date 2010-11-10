@@ -16,16 +16,18 @@ Gem::Specification.new do |s|
   s.executables = ["noprocast"]
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.rdoc"
+     "README.md"
   ]
   s.files = [
     ".document",
      ".gitignore",
      "LICENSE",
-     "README.rdoc",
+     "README.md",
      "Rakefile",
      "VERSION",
+     "bin/noprocast",
      "lib/noprocast.rb",
+     "noprocast.gemspec",
      "spec/noprocast_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
