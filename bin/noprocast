@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'lib', 'noprocast')
+
+begin
+	case ARGV.first
+	when 'on'
+		Noprocast.activate!
+	when 'off'
+		Noprocast.deactivate!
+	when 'status'
+		puts Noprocast.status_message
+	when 'edit'
+		if Process.uid != File.stat(Noprocast.deny_file_path).uid
+			puts "Can't edit this file as it belongs to another user (hint: don't use sudo)" 
+			exit
+		end
+		Noprocast.edit!
+	when 'help', '-h', '--help', nil
+		puts "Usage: [sudo] noprocast [on|off|status|edit]"
+	end
+rescue Errno::EACCES
+	puts "Permission denied: try sudo noprocast"
+end

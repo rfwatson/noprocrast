@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "noprocast"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Give procastination a swift kick in the balls.}
+    gem.description = %Q{Block access to addictive websites in one command-line swoop.}
     gem.email = "rfwatson@gmail.com"
     gem.homepage = "http://github.com/rfwatson/noprocast"
     gem.authors = ["Rob Watson"]
