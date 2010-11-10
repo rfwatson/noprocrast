@@ -1,17 +1,26 @@
 = noprocast
 
-Description goes here.
+A gem to stop you procastinating. Noprocast automatically adds and removes items from your /etc/hosts, rendering addictive websites useless.
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+= Installation
 
-== Copyright
+<tt>gem install noprocast</tt>
 
-Copyright (c) 2010 Rob Watson. See LICENSE for details.
+= Usage
+
+<tt>noprocast status</tt> check if noprocast is enabled or not
+
+<tt>noprocast edit</tt> edit noprocast's list of banned websites
+
+<tt>[sudo] noprocast on</tt> enable noprocast
+
+<tt>[sudo] noprocast off</tt> disable noprocast
+
+= Notes
+
+Noprocast saves a backup of your /etc/hosts file in /etc/.hosts.noprocastbackup the first time it runs. Just in case.
+
+= Contact
+
+rfwatson at gmail
+
