@@ -15,9 +15,9 @@ Usage
 
 `noprocast edit` edit noprocast's list of banned websites
 
-`[sudo] noprocast on` enable noprocast
+`noprocast on` enable noprocast
 
-`[sudo] noprocast off` disable noprocast
+`noprocast off` disable noprocast
 
 Notes
 -----
