@@ -4,16 +4,16 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{noprocast}
-  s.version = "0.1.4"
+  s.name = %q{noprocrast}
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rob Watson"]
   s.date = %q{2010-11-11}
-  s.default_executable = %q{noprocast}
+  s.default_executable = %q{noprocrast}
   s.description = %q{Block access to addictive websites in one command-line swoop.}
   s.email = %q{rfwatson@gmail.com}
-  s.executables = ["noprocast"]
+  s.executables = ["noprocrast"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.md"
@@ -25,20 +25,20 @@ Gem::Specification.new do |s|
      "README.md",
      "Rakefile",
      "VERSION",
-     "bin/noprocast",
-     "lib/noprocast.rb",
-     "noprocast.gemspec",
-     "spec/noprocast_spec.rb",
+     "bin/noprocrast",
+     "lib/noprocrast.rb",
+     "noprocrast.gemspec",
+     "spec/noprocrast_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/rfwatson/noprocast}
+  s.homepage = %q{http://github.com/rfwatson/noprocrast}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Give procastination a swift kick in the balls.}
+  s.summary = %q{Give procrastination a swift kick in the balls.}
   s.test_files = [
-    "spec/noprocast_spec.rb",
+    "spec/noprocrast_spec.rb",
      "spec/spec_helper.rb"
   ]
 

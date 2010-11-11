@@ -1,4 +1,4 @@
-noprocast
+noprocrast
 =========
 
 A gem to stop you procastinating. Noprocast automatically adds and removes items from your /etc/hosts, rendering addictive websites useless.
@@ -6,18 +6,18 @@ A gem to stop you procastinating. Noprocast automatically adds and removes items
 Installation
 ------------
 
-gem install noprocast
+gem install noprocrast
 
 Usage
 -----
 
-`noprocast status` check if noprocast is enabled or not
+`noprocrast status` check if noprocrast is enabled or not
 
-`noprocast edit` edit noprocast's list of banned websites
+`noprocrast edit` edit noprocrast's list of banned websites
 
-`noprocast on` enable noprocast
+`noprocrast on` enable noprocrast
 
-`noprocast off` disable noprocast
+`noprocrast off` disable noprocrast
 
 Notes
 -----

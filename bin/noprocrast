@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'lib', 'noprocrast')
+
+begin
+	case ARGV.first
+	when 'on', 'reload'
+		Noprocrast.activate!
+	when 'off'
+		Noprocrast.deactivate!
+	when 'status'
+		puts Noprocrast.status_message
+	when 'edit'
+		if File.exists?(Noprocrast.deny_file_path) && (Process.uid != File.stat(Noprocrast.deny_file_path).uid)
+			puts "Can't edit this file as it belongs to another user (hint: don't use sudo)" 
+			exit
+		end
+		Noprocrast.edit!
+		if Noprocrast.active?
+			puts "Saved. Now: noprocrast reload"
+		else
+			puts "Saved. Now: noprocrast on"
+		end
+	when 'help', '-h', '--help', nil
+		puts "Usage: [sudo] noprocrast [on|off|status|edit]"
+	end
+rescue Errno::EACCES
+	puts "Permission denied: try sudo noprocrast"
+end

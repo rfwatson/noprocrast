@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "noprocast"
-    gem.summary = %Q{Give procastination a swift kick in the balls.}
+    gem.name = "noprocrast"
+    gem.summary = %Q{Give procrastination a swift kick in the balls.}
     gem.description = %Q{Block access to addictive websites in one command-line swoop.}
     gem.email = "rfwatson@gmail.com"
-    gem.homepage = "http://github.com/rfwatson/noprocast"
+    gem.homepage = "http://github.com/rfwatson/noprocrast"
     gem.authors = ["Rob Watson"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
@@ -39,7 +39,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "noprocast #{version}"
+  rdoc.title = "noprocrast #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
