@@ -25,6 +25,7 @@ class Noprocast
 			File.open("/etc/hosts", 'a') do |file|
 				file << "\n\n# noprocast start\n#{current_hosts.map { |host| "127.0.0.1 #{host}" }.join("\n")}\n# noprocast end"
 			end
+			system "dscacheutil -flushcache" # only for OSX >= 10.5: flush the DNS cache
 		end
 
 		def deactivate!
@@ -57,6 +58,7 @@ class Noprocast
 		end
 
 		def edit!
+			setup_deny_file_if_required!
 			editor = ENV['EDITOR'] || 'vi'
 			system "#{editor} #{deny_file_path}"
 		end
