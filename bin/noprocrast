@@ -2,6 +2,15 @@
 
 require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'lib', 'noprocrast')
 
+acceptable = "[on|off|status|edit]"
+message = "Usage: [sudo] noprocrast #{acceptable}"
+
+# Bail immediately if inputs are wrong
+if ARGV.length > 1 then
+  puts message
+  exit
+end
+
 begin
 	case ARGV.first
 	when 'on', 'reload'
@@ -22,7 +31,9 @@ begin
 			puts "Saved. Now: noprocrast on"
 		end
 	when 'help', '-h', '--help', nil
-		puts "Usage: [sudo] noprocrast [on|off|status|edit]"
+		puts message
+        else
+                puts "Error: bad input.\n#{message}"
 	end
 rescue Errno::EACCES
 	puts "Permission denied: try sudo noprocrast"

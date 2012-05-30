@@ -12,7 +12,9 @@ class Noprocrast
 
 		def current_hosts
 			setup_deny_file_if_required!
-			File.read(deny_file_path).split(/\n/).select { |line| line.match(/[a-zA-Z0-9]/) }.map(&:strip)
+			hosts = File.read(deny_file_path).split(/\n/).select { |line| line.match(/[a-zA-Z0-9]/) }.map(&:strip)
+                        wwwhosts = hosts.map { |h| "www." + h.to_s unless h =~ /^www/ }
+                        (hosts + wwwhosts).sort
 		end
 
 		def hosts_file_content
